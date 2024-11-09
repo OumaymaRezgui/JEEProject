@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>create classroom</title>
+	<style type="text/css">
+.required-field::after {
+    content: "*";
+    color: red;
+}
+</style>
+</h:head>
+<h:body>
+	<h:form>
+		<h:messages showDetail="true" closable="true"></h:messages>
+		<h:panelGrid columns="3" cellpadding="7">
+			<h:outputLabel value="Grade: " styleClass="required-field"></h:outputLabel>
+			<h:inputText id="grade"
+				value="#{classroomController.classroom.grade}" required="true"
+				requiredMessage="grade is required">
+				<f:ajax event="blur" render=""></f:ajax>
+			</h:inputText>
+			<h:message id="messageGrade" for="grade" style="color:red"></h:message>
+			<h:outputLabel value="Name: " styleClass="required-field"></h:outputLabel>
+			<h:inputText id="name" value="#{classroomController.classroom.name}"
+				required="true" requiredMessage="name is required" validatorMessage="the name must be between 2 and 3">
+				<f:validateLength minimum="2" maximum="3"></f:validateLength>
+				<f:ajax event="blur" render=""></f:ajax>
+			</h:inputText>
+			<h:message id="messageName" for="name" style="color:red"></h:message>
+			<h:commandButton value="Create classroom"
+				action="#{classroomController.doCreateClassRoom()}"></h:commandButton>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<title> Welcome to school management </title>
+<style>
+body {
+    background-image: url("images/School-Management.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 50%;
+}
+</style>
+</h:head>   
+<h:body>
+<center>   
+<h:form>
+<h:panelGrid columns="2" cellpadding="7">
+<h:outputLink value="classroom/createClassroom.xhtml"> Create Classroom </h:outputLink>
+<h:outputLink> Create Student   </h:outputLink>
+</h:panelGrid>
+
+</h:form>
+
+</center>
+
+</h:body>   
+</html>

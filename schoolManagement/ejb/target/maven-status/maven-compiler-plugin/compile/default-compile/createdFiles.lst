@@ -1,0 +1,6 @@
+com\cifop\entity\Student.class
+com\citop\service\soap\StudentSoapWebservice.class
+com\citop\service\ClassRoomService.class
+com\cifop\entity\ClassRoom.class
+com\citop\service\soap\StudentSoapWebserviceImpl.class
+com\citop\service\StudentService.class
